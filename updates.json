@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "latest_version": "2.2.0",
-  "from_version_hint": "2.1.9",
+  "latest_version": "2.2.1",
+  "from_version_hint": "2.2.0",
   "from_versions": [
-    "2.1.9"
+    "2.2.0"
   ],
-  "release_title": "v2.2.0 - Platica con DJ RAM (BETA) y Modo Alexa",
-  "release_notes_md": "# Sound Co-Pilot 2.2.0\n\nActualización para instalaciones **2.1.9**. En la app: Configuración → Sistema →\nBuscar actualizaciones. También puedes descargar el `.scpup` y abrirlo con\n`APPLY_UPDATE.bat`. Cierra la app antes de la aplicación manual.\n\n## Novedades\n\n- **Platica con DJ RAM (BETA)** en Modo Ambiente: texto y micrófono.\n- Personalidades Neutral y Mexicanizada, con las mismas acciones musicales.\n- Elige y reproduce canciones de tu biblioteca únicamente cuando se lo pides.\n- Usa los títulos y artistas registrados; avisa si el audio no pudo arrancar.\n- Voz Google en español y voces alternativas. Música más baja mientras habla.\n- Modo Alexa y calibración de micrófono mejorados.\n- Se conservan biblioteca, playlists y ajustes; no se incluyen canciones personales.\n\n## Activación de la conversación (una vez por equipo)\n\nEl parche **no incluye Ollama ni el modelo** para evitar descargar varios GB a\nquienes no utilizan el chat. Instala Ollama para Windows desde\nhttps://ollama.com/download/windows y ejecuta en una terminal:\n\n```powershell\nollama pull qwen3:4b-instruct-2507-q4_K_M\n```\n\nDeja Ollama abierto y pulsa **Actualizar modelos** dentro de Platica con DJ RAM.\nEl modelo ocupa aproximadamente 2,5 GB de descarga. Después, la conversación\nfunciona localmente. El rendimiento depende de CPU/GPU y memoria disponible;\nno se garantiza la misma velocidad en todas las GTX/RTX. Pruebas locales: RTX 4060 8 GB.\n\nLa voz Google usa Google Translate mediante gTTS: necesita internet y envía el\ntexto de las respuestas a ese servicio. No es Chirp premium ni Grok/Tesla.\nEl primer arranque tras actualizar puede instalar dependencias de Python y\nnecesita internet. El reconocimiento local necesita su modelo/runtime de voz;\nel reconocimiento Google necesita conexión.\n\nEsta publicación es un **parche**, no un instalador completo para equipos nuevos.\nDesde versiones anteriores a 2.1.9, actualiza primero a 2.1.9 usando su release.\n",
-  "published_at_utc_iso": "2026-09-10T19:39:42.907145+00:00",
-  "package_id": "Sound-Co-Pilot-2.1.9-to-2.2.0",
-  "patch_sha256": "d9e42fc9acdebda7e3e4706057df2cfbab2f0c4693346412a111826a5e066a9c",
-  "payload_total_bytes": 2079675,
+  "release_title": "v2.2.1 - Sincronizacion segura con Spotify",
+  "release_notes_md": "## Sound Co-Pilot 2.2.1\n\n- Nueva sincronización de playlists con Spotify mediante OAuth PKCE. La app importa metadatos y nunca guarda contraseñas ni requiere Client Secret.\n- Búsqueda y verificación de coincidencias mediante YouTube Data API, priorizando Art Tracks, canales Topic y audio oficial frente a videoclips, directos, remixes, covers o karaoke.\n- Selección múltiple de canciones pendientes y envío de enlaces verificados a Procesamiento de Audio. El proceso no comienza automáticamente y el usuario conserva el control antes de continuar.\n- Spotify y YouTube solo aportan catálogo, metadatos y enlaces. Para generar stems deben utilizarse grabaciones propias, compradas o autorizadas.\n- Limpieza de distribución reforzada: Client ID, API Key, tokens OAuth, historial de sincronización, calibración de micrófono, pistas procesadas y paquetes exportados quedan fuera del release.\n- Compatibilidad NVIDIA reforzada: la detección ejecuta un kernel CUDA real. GTX/RTX compatibles usan GPU; si el runtime no reconoce una tarjeta antigua o recién lanzada, la app baja de forma segura al perfil CPU en vez de iniciar un trabajo destinado a fallar.\n",
+  "published_at_utc_iso": "2026-09-10T22:12:58.195646+00:00",
+  "package_id": "Sound-Co-Pilot-2.2.0-to-2.2.1",
+  "patch_sha256": "a8c6d660979fe92133236dad30c282e3113a57a395c1a4faf8e6c7057bfe8003",
+  "payload_total_bytes": 2006821,
   "requires_restart": true,
-  "requires_reinstall_requirements": true,
-  "asset_name": "Sound-Co-Pilot-2.1.9-to-2.2.0.scpup",
-  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/555691680",
-  "asset_size_bytes": 500178,
+  "requires_reinstall_requirements": false,
+  "asset_name": "Sound-Co-Pilot-2.2.0-to-2.2.1.scpup",
+  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/555921793",
+  "asset_size_bytes": 471557,
   "github_repo": "omarp4304-cyber/sound-co-pilot-updates",
-  "release_tag": "v2.2.0"
+  "release_tag": "v2.2.1"
 }
