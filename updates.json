@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
-  "latest_version": "2.2.1",
+  "latest_version": "2.2.2",
   "from_version_hint": "",
   "from_versions": [
+    "2.0.0",
     "2.0.1",
     "2.0.2",
     "2.1.0",
@@ -41,19 +42,20 @@
     "2.1.9X",
     "2.1.9Y",
     "2.1.9Z",
-    "2.2.0"
+    "2.2.0",
+    "2.2.1"
   ],
-  "release_title": "v2.2.1 - Sincronizacion segura con Spotify",
-  "release_notes_md": "## Sound Co-Pilot 2.2.1\n\n- Nueva sincronización de playlists con Spotify mediante OAuth PKCE. La app importa metadatos y nunca guarda contraseñas ni requiere Client Secret.\n- Búsqueda y verificación de coincidencias mediante YouTube Data API, priorizando Art Tracks, canales Topic y audio oficial frente a videoclips, directos, remixes, covers o karaoke.\n- Selección múltiple de canciones pendientes y envío de enlaces verificados a Procesamiento de Audio. El proceso no comienza automáticamente y el usuario conserva el control antes de continuar.\n- Spotify y YouTube solo aportan catálogo, metadatos y enlaces. Para generar stems deben utilizarse grabaciones propias, compradas o autorizadas.\n- Limpieza de distribución reforzada: Client ID, API Key, tokens OAuth, historial de sincronización, calibración de micrófono, pistas procesadas y paquetes exportados quedan fuera del release.\n- Compatibilidad NVIDIA reforzada: la detección ejecuta un kernel CUDA real. GTX/RTX compatibles usan GPU; si el runtime no reconoce una tarjeta antigua o recién lanzada, la app baja de forma segura al perfil CPU en vez de iniciar un trabajo destinado a fallar.\n",
-  "published_at_utc_iso": "2026-09-10T22:25:03.946804+00:00",
-  "package_id": "Sound-Co-Pilot-2.0.1-to-2.2.1-cumulative",
-  "patch_sha256": "5292b600070f1653082c0621cbd911d5fd5bdaa4a5436351e56a86b826ca48f4",
-  "payload_total_bytes": 3283216,
+  "release_title": "v2.2.2 - Metadatos Spotify y transicion silenciosa",
+  "release_notes_md": "# Version 2.2.2\n\n- Descargas preparadas desde Spotify: titulo, artista, colaboradores (ft) y portada asociados a cada cancion, tambien en lotes de tres o mas pistas.\n- Importacion individual desde Spotify con los mismos metadatos.\n- Portada local para uso sin conexion; si falla su descarga, se conserva el enlace remoto y se informa en el registro del trabajo.\n- Alexa abre Modo Ambiente sin confirmacion hablada superpuesta a la voz del modo.\n- Sin dependencias nuevas ni cambios de requisitos de GPU; se conservan datos, modelos y audio del usuario.\n\nLa actualizacion requiere reiniciar la aplicacion. La compatibilidad anunciada se limita a las bases incluidas y verificadas en el manifiesto acumulativo; no se afirma compatibilidad con versiones sin cadena de migracion disponible.\n",
+  "published_at_utc_iso": "2026-09-11T22:05:48.001877+00:00",
+  "package_id": "Sound-Co-Pilot-2.0.0-to-2.2.2-cumulative",
+  "patch_sha256": "7e9827ae038424e5b24c96869e6e142280b65938b8219663da04ef47ee72eb21",
+  "payload_total_bytes": 3291993,
   "requires_restart": true,
   "requires_reinstall_requirements": true,
-  "asset_name": "Sound-Co-Pilot-2.0.1-to-2.2.1-cumulative.scpup",
-  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/555938564",
-  "asset_size_bytes": 853065,
+  "asset_name": "Sound-Co-Pilot-2.0.0-to-2.2.2-cumulative.scpup",
+  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/558095702",
+  "asset_size_bytes": 856091,
   "github_repo": "omarp4304-cyber/sound-co-pilot-updates",
-  "release_tag": "v2.2.1"
+  "release_tag": "v2.2.2"
 }
