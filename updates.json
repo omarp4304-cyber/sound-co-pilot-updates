@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest_version": "2.2.2",
+  "latest_version": "2.2.3",
   "from_version_hint": "",
   "from_versions": [
     "2.0.0",
@@ -43,19 +43,20 @@
     "2.1.9Y",
     "2.1.9Z",
     "2.2.0",
-    "2.2.1"
+    "2.2.1",
+    "2.2.2"
   ],
-  "release_title": "v2.2.2 - Metadatos Spotify y transicion silenciosa",
-  "release_notes_md": "# Version 2.2.2\n\n- Descargas preparadas desde Spotify: titulo, artista, colaboradores (ft) y portada asociados a cada cancion, tambien en lotes de tres o mas pistas.\n- Importacion individual desde Spotify con los mismos metadatos.\n- Portada local para uso sin conexion; si falla su descarga, se conserva el enlace remoto y se informa en el registro del trabajo.\n- Alexa abre Modo Ambiente sin confirmacion hablada superpuesta a la voz del modo.\n- Sin dependencias nuevas ni cambios de requisitos de GPU; se conservan datos, modelos y audio del usuario.\n\nLa actualizacion requiere reiniciar la aplicacion. La compatibilidad anunciada se limita a las bases incluidas y verificadas en el manifiesto acumulativo; no se afirma compatibilidad con versiones sin cadena de migracion disponible.\n",
-  "published_at_utc_iso": "2026-09-11T22:05:48.001877+00:00",
-  "package_id": "Sound-Co-Pilot-2.0.0-to-2.2.2-cumulative",
-  "patch_sha256": "7e9827ae038424e5b24c96869e6e142280b65938b8219663da04ef47ee72eb21",
-  "payload_total_bytes": 3291993,
+  "release_title": "v2.2.3 - La app se reabre sola al actualizar",
+  "release_notes_md": "# Version 2.2.3\n\n- Al instalar una actualizacion, la aplicacion se cierra por completo -- servidor y ventana -- antes de volver a abrirse. Hasta la 2.2.2 la instancia anterior seguia activa y conservaba el puerto local 5000, de modo que el arranque siguiente terminaba con el aviso de puerto ocupado.\n- El puerto local 5000 es fijo porque la Redirect URI registrada en Spotify apunta a esa direccion exacta; no se sustituye por otro puerto.\n- El arranque espera a que el puerto quede libre en lugar de interrumpirse en el primer intento.\n- Una ventana que haya quedado activa por una actualizacion anterior se cierra al abrir la aplicacion. La comprobacion exige que el proceso pertenezca a esta misma instalacion y que ejecute codigo anterior al del disco, de forma que abrir la aplicacion dos veces de manera deliberada sigue mostrando el aviso sin cerrar la ventana en uso.\n- El mensaje de puerto ocupado indica los pasos para identificar el programa que lo retiene.\n- Sin dependencias nuevas ni cambios de requisitos de GPU; se conservan datos, modelos y audio del usuario.\n\nLa actualizacion requiere reiniciar la aplicacion. La compatibilidad anunciada se limita a las bases incluidas y verificadas en el manifiesto acumulativo; no se afirma compatibilidad con versiones sin cadena de migracion disponible.\n",
+  "published_at_utc_iso": "2026-09-14T18:09:15.511229+00:00",
+  "package_id": "Sound-Co-Pilot-2.0.0-to-2.2.3-cumulative",
+  "patch_sha256": "fe5bd84abda3bc3f902a25cd31653053756442d00f4a0e632d21953b22cdefb7",
+  "payload_total_bytes": 3312146,
   "requires_restart": true,
   "requires_reinstall_requirements": true,
-  "asset_name": "Sound-Co-Pilot-2.0.0-to-2.2.2-cumulative.scpup",
-  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/558095702",
-  "asset_size_bytes": 856091,
+  "asset_name": "Sound-Co-Pilot-2.0.0-to-2.2.3-cumulative.scpup",
+  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/563944804",
+  "asset_size_bytes": 864012,
   "github_repo": "omarp4304-cyber/sound-co-pilot-updates",
-  "release_tag": "v2.2.2"
+  "release_tag": "v2.2.3"
 }
