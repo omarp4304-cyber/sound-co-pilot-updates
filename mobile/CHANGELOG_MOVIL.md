@@ -1,0 +1,26 @@
+# Changelog - Sound Co-Pilot Lite (Android)
+
+## 1.0.0 build 1 (2026-09-19)
+
+Etiqueta: `mobile-v1.0.0+1` - emparejada con PC 2.2.4
+
+Primera version con **numeracion propia**. Antes la app del telefono se
+anunciaba como 2.2.4 porque copiaba el numero de la app de PC; al abrir este
+canal se separaron, porque son dos programas que se publican por separado.
+
+- Biblioteca en el almacenamiento privado de la app, con portadas y metadatos
+  importados de la PC.
+- Reproductor multipista sobre `flutter_soloud` con voice group: los cuatro
+  stems arrancan y se reposicionan en el mismo instante. **Deriva medida: 0 ms**
+  con WAV y FLAC.
+- Mezcla por stem (volumen, mute, solo) y presets, que se guardan por cancion.
+- La biblioteca, las playlists, la mezcla y la ultima posicion sobreviven a
+  cerrar la app, reiniciar el telefono e instalar un APK nuevo encima. Solo
+  desinstalar las borra.
+- Salida de audio abierta con la frecuencia y el tamano de buffer **reales del
+  aparato**, leidos por `AudioManager`, en vez de 44 100 / 2048 fijos.
+- Interfaz adaptada de 288 a 640 dp y a escala de texto hasta 1.6, sin
+  desbordes en las 11 configuraciones de pantalla probadas.
+- Modo Ambiente: cliente remoto de DJ RAM corriendo en la PC.
+- Sound Co-Pilot Device: monitor remoto del equipo.
+- Puente manual desde la PC con `tools/pc_to_phone.py` (FLAC u Ogg).
