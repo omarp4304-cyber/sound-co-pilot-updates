@@ -24,3 +24,9 @@ canal se separaron, porque son dos programas que se publican por separado.
 - Modo Ambiente: cliente remoto de DJ RAM corriendo en la PC.
 - Sound Co-Pilot Device: monitor remoto del equipo.
 - Puente manual desde la PC con `tools/pc_to_phone.py` (FLAC u Ogg).
+- Arreglo: el ecualizador tumbaba el arranque. `_applyEqualizer()` llamaba
+  `deactivate()` sobre un filtro que no estaba puesto, y en flutter_soloud
+  3.5.4 eso lanza `SoLoudFilterNotFoundException` en vez de no hacer nada.
+  Como corre al restaurar los ajustes, la app se quedaba en el splash con
+  "No se pudo iniciar el motor de audio" en cualquier instalacion cuyo
+  `settings.json` fuera anterior al ecualizador.
