@@ -10,9 +10,9 @@
   "apkSizeBytes": 0,
   "releasedAt": "2026-09-19",
   "publishedAtUtcIso": "2026-09-19T00:00:00+00:00",
-  "avisoTitulo": "Prueba de canal",
-  "aviso": "Mensaje enviado desde la PC a las 16:28 del 21/09/2026 para comprobar que el canal entrega sin publicar APK.",
-  "avisoAt": "2026-09-21T16:27:41.450768+00:00",
+  "avisoTitulo": "Sound Co-Pilot Lite 1.0.0",
+  "aviso": "Canal del telefono abierto. Esta es la 1.0.0 LITE, la primera con numero propio: hasta hoy el movil se anunciaba como 2.2.4 porque copiaba el numero de la PC. El APK todavia se entrega a mano; en cuanto exista el almacen de firma definitivo, las actualizaciones apareceran aqui solas.",
+  "avisoAt": "2026-09-21T16:28:27.319015+00:00",
   "notes": [
     "Primera version con numeracion propia del movil (antes se anunciaba como 2.2.4, la de la PC).",
     "Biblioteca y reproductor multipista con voice group de SoLoud: deriva medida de 0 ms entre stems.",
