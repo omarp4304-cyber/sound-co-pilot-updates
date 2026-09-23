@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "version": "1.0.0",
-  "mobileBuild": 1,
+  "version": "1.1.0",
+  "mobileBuild": 2,
   "pairedPcVersion": "2.2.4",
-  "releaseTag": "mobile-v1.0.0+1",
+  "releaseTag": "mobile-v1.1.0+2",
   "apkUrl": "",
   "apkName": "",
   "apkSha256": "",
   "apkSizeBytes": 0,
-  "releasedAt": "2026-09-19",
-  "publishedAtUtcIso": "2026-09-19T00:00:00+00:00",
+  "releasedAt": "2026-09-23",
+  "publishedAtUtcIso": "2026-09-23T19:49:46.707412+00:00",
   "avisoTitulo": "Sound Co-Pilot Lite 1.0.0",
   "aviso": "Canal del telefono abierto. Esta es la 1.0.0 LITE, la primera con numero propio: hasta hoy el movil se anunciaba como 2.2.4 porque copiaba el numero de la PC. El APK todavia se entrega a mano; en cuanto exista el almacen de firma definitivo, las actualizaciones apareceran aqui solas.",
   "avisoAt": "2026-09-21T16:28:27.319015+00:00",
   "notes": [
-    "Primera version con numeracion propia del movil (antes se anunciaba como 2.2.4, la de la PC).",
-    "Biblioteca y reproductor multipista con voice group de SoLoud: deriva medida de 0 ms entre stems.",
-    "La biblioteca, las playlists, la mezcla por cancion y la ultima posicion sobreviven a cerrar la app y a reinstalar encima.",
-    "Salida de audio configurada con la frecuencia y el buffer reales del aparato.",
-    "Interfaz adaptada de 288 a 640 dp y a escala de texto hasta 1.6.",
-    "Modo Ambiente como cliente remoto de DJ RAM en la PC y Sound Co-Pilot Device como monitor."
+    "Nueve temas con vista previa: Oscuro, Claro, AMOLED y los seis de la app de PC, con opcion de seguir al telefono.",
+    "Ecualizador nuevo de 6 bandas, igual al de la PC: grafica tactil, espectro en vivo, A/B, deshacer y presets.",
+    "Motor de audio nuevo: el ecualizador ya no corta lo que pasa de 12 kHz y los graves se ajustan con precision.",
+    "Ecualizador por stem: voz, bateria, bajo y otros por separado, sin desfasar los stems.",
+    "DJ RAM mide mejor: ya distingue el sub de los graves.",
+    "Arreglo: la app podia cerrarse sola al salir."
   ]
 }
