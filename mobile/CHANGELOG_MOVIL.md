@@ -1,5 +1,17 @@
 # Changelog - Sound Co-Pilot Lite (Android)
 
+## 1.2.0 build 3 (2026-09-23)
+
+Etiqueta: `mobile-v1.2.0+3` - emparejada con PC 2.2.4
+
+- La app se actualiza sola: al abrirla avisa si hay version nueva y la descarga e instala con un boton.
+- Nueve temas con vista previa: Oscuro, Claro, AMOLED y los seis de la app de PC.
+- Ecualizador nuevo de 6 bandas, igual al de la PC, con grafica tactil y espectro en vivo.
+- Motor de audio nuevo: el ecualizador ya no corta lo que pasa de 12 kHz y los graves se ajustan con precision.
+- Ecualizador por stem: voz, bateria, bajo y otros por separado.
+- DJ RAM ya distingue el sub de los graves.
+- Arreglo: la app podia cerrarse sola al salir.
+
 ## 1.1.0 build 2 (2026-09-23)
 
 Etiqueta: `mobile-v1.1.0+2` - emparejada con PC 2.2.4
