@@ -11,9 +11,9 @@
   "apkCertSha256": "b218a628d6c8c6165bc450db8800365559f2d6bfdc0495f42da35810430369cf",
   "releasedAt": "2026-09-23",
   "publishedAtUtcIso": "2026-09-23T23:07:10.886345+00:00",
-  "avisoTitulo": "Sound Co-Pilot Lite 1.1.0",
-  "aviso": "Ya salio la 1.1.0 LITE: nueve temas, ecualizador nuevo sin el corte de 12 kHz y ecualizador por stem. El APK todavia se entrega a mano; en cuanto exista el almacen de firma definitivo, las actualizaciones apareceran aqui solas.",
-  "avisoAt": "2026-09-23T19:49:58.873282+00:00",
+  "avisoTitulo": "Sound Co-Pilot Lite 1.2.0",
+  "aviso": "Desde la 1.2.0 la app se actualiza sola: cuando haya version nueva veras un aviso arriba con el boton Actualizar. Si tienes una version anterior que te pasaron a mano, desinstalala una vez e instala la 1.2.0 (Android no deja ponerla encima).",
+  "avisoAt": "2026-09-23T23:07:24.740613+00:00",
   "notes": [
     "La app se actualiza sola: al abrirla avisa si hay version nueva y la descarga e instala con un boton.",
     "Nueve temas con vista previa: Oscuro, Claro, AMOLED y los seis de la app de PC.",
