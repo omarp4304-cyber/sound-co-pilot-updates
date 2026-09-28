@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest_version": "2.2.4",
+  "latest_version": "2.2.5",
   "from_version_hint": "",
   "from_versions": [
     "2.0.0",
@@ -45,19 +45,20 @@
     "2.2.0",
     "2.2.1",
     "2.2.2",
-    "2.2.3"
+    "2.2.3",
+    "2.2.4"
   ],
-  "release_title": "v2.2.4 - DJ RAM, nuevos temas y Sound Co-Pilot Device",
-  "release_notes_md": "# Version 2.2.4\n\nSound Co-Pilot 2.2.4 agrupa las mejoras acumuladas desde la 2.2.3 y no agrega\ndependencias nuevas.\n\n## Correccion definitiva de arranque\n\n- El acumulativo incluye ahora `backend/mobile_sync.py`. La primera publicacion\n  lo omitio: una instalacion 2.1.5 no tenia ese modulo y el backend nuevo\n  terminaba con `ModuleNotFoundError` antes de abrir el puerto 5000.\n- El lanzador ya no usa la portada completa como prueba de disponibilidad. Esa\n  pagina enumera la biblioteca y renderiza toda la interfaz; en equipos lentos\n  podia superar los dos segundos, acumular reintentos y terminar con el aviso\n  de que `127.0.0.1:5000` no respondio aunque Flask estuviera iniciando.\n- La comprobacion usa ahora `/api/health`, omite proxies para la conexion local,\n  dispone de hasta tres minutos y avisa de inmediato si el proceso del backend\n  termina. La version visible se mantiene en 2.2.4.\n\n## Audio y Sound Co-Pilot Device\n\n- El indicador de audio de la cabecera ahora permite elegir la salida y el\n  microfono usados por la app.\n- La salida se aplica a la mezcla principal, voces de DJ RAM, tonos de prueba y\n  reproductores auxiliares.\n- Al elegir `Sound Co-Pilot Device`, la app silencia la mezcla local y sincroniza\n  reproduccion, pausa, posicion y cambio de pista con la copia guardada en la\n  microSD del ESP32-S3. BLE transporta control, no audio A2DP.\n- Las pruebas del mando de seis botones, Modo Dado y microfono INMP441 solo se\n  habilitan con el Device conectado y muestran la lectura a la vez en la app y\n  en la OLED.\n- Se retiraron las imagenes de referencia del panel del Device.\n- Los botones multimedia de audifonos y teclados controlan play/pausa, siguiente\n  y anterior mediante una, dos o tres pulsaciones.\n\nLas pruebas y la salida por microSD requieren el firmware\n`SOUND_CO-PILOT_BETA_1.0.1` actualizado en el ESP32-S3. El firmware no se\nreprograma desde este parche de escritorio.\n\n## DJ RAM, Spotify e interfaz\n\n- DJ RAM conserva sus instrucciones con bibliotecas grandes, termina sus\n  respuestas y evita datos musicales no verificados.\n- El Modo Ambiente ya no abre el microfono mientras prepara o reproduce una\n  locucion, y la voz no se corta por un temporizador demasiado corto.\n- Spotify incorpora `Recargar playlist` y registra las pistas procesadas sin una\n  sincronizacion manual adicional.\n- Se agregan los temas atardecer, bosque, vino y grafito, ademas de nuevas\n  opciones de visualizacion ampliada.\n- Se incluyen las guias animadas, el anuncio de Sound Co-Pilot LITE, el redisenio\n  de terminos y licencias, y el resaltado del cursor con doble Ctrl.\n- `Sound Co-Pilot.exe` pasa a ser el lanzador con icono propio y repara los\n  accesos directos de instalaciones anteriores.\n\n## Actualizacion\n\nEl paquete es acumulativo y cubre todas las versiones oficiales desde la 2.1.1\nhasta la 2.2.3. Conserva configuracion, biblioteca, tokens, audio, modelos y\nresultados del usuario. La aplicacion se reinicia al terminar.\n",
-  "published_at_utc_iso": "2026-09-27T04:17:45.390630+00:00",
-  "package_id": "Sound-Co-Pilot-2.1.1-to-2.2.4-cumulative",
-  "patch_sha256": "91fa15c32ec254e2f449ae6eb43703347cda64ccf6ad0c5626519022fcf93222",
-  "payload_total_bytes": 5631093,
+  "release_title": "v2.2.5 - Modo Practica, guias en pantalla y firmware del Device por Wi-Fi",
+  "release_notes_md": "# Version 2.2.5\n\nSound Co-Pilot 2.2.5 agrega el Modo Practica, las guias en pantalla y la\nactualizacion del firmware del Sound Co-Pilot Device por Wi-Fi. No agrega\ndependencias nuevas.\n\n## Modo Practica\n\n- Se activa en Configuracion > Reproduccion y viene apagado.\n- Tempo de 50 a 125 % sin alterar el tono.\n- Transposicion de -6 a +6 semitonos con afinacion fina de +-50 cents; muestra\n  la tonalidad resultante.\n- Loop A-B con ajuste fino, marca en la barra de progreso, cuenta previa de 1 o\n  2 compases y entrenador de velocidad.\n- Retirar o aislar un stem para tocar encima o estudiar una parte.\n- Secciones guardadas por pista, con su tempo y transposicion.\n- No opera con DJ RAM ni con AUDIO LAB.\n\n## Guias en pantalla\n\n- Nuevas guias por pasos: Reproduccion basica, Stems y ecualizacion, DJ RAM y\n  Modo Ambiente, y Modo Practica. Todas se reunen en Configuracion >\n  Actualizaciones > Guias en pantalla.\n- Las guias de Spotify, restriccion de edad y envio al celular recuperan sus\n  imagenes: el paquete 2.2.4 no las incluia.\n\n## Sound Co-Pilot Device\n\n- Actualizacion del firmware desde la app (Configuracion > Device > Firmware),\n  sin Arduino IDE ni cable: el Device entra a la red Wi-Fi, la PC le envia la\n  imagen y el Device la verifica antes de reiniciar. Si falla, conserva el\n  firmware anterior. Se confirma con K3 en el Device.\n- La app incluye el firmware BETA 2.1.0: encendido y apagado con el pulsador\n  iluminado, aro de luz como indicador y nombre \"Sound-Copilot Device\".\n- El Device que ya tenga un firmware anterior a BETA 2.1.0 necesita instalarlo\n  una vez por USB; desde ahi, las siguientes versiones llegan por la app.\n- La app detecta el Device apagado o desconectado en unos segundos y el panel\n  vuelve a recibir su estado completo.\n\n## Spotify y DJ RAM\n\n- Las playlists enlazadas con Spotify muestran su portada.\n- La verificacion en YouTube funciona sin YouTube Data API Key.\n- Las noticias de DJ RAM ya no repiten titulares de dias anteriores.\n\n## Actualizacion\n\nEl paquete es acumulativo y cubre todas las versiones oficiales desde la 2.1.1\nhasta la 2.2.4. Conserva configuracion, biblioteca, tokens, audio, modelos y\nresultados del usuario. La aplicacion se reinicia al terminar.\n",
+  "published_at_utc_iso": "2026-09-28T19:23:31.077511+00:00",
+  "package_id": "Sound-Co-Pilot-2.1.1-to-2.2.5-cumulative",
+  "patch_sha256": "7a6f5678ac124055e89d938ea3958de750551d516bc8147844fa752ea7a29b09",
+  "payload_total_bytes": 7894225,
   "requires_restart": true,
   "requires_reinstall_requirements": true,
-  "asset_name": "Sound-Co-Pilot-2.1.1-to-2.2.4-cumulative.scpup",
-  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/592116569",
-  "asset_size_bytes": 2947112,
+  "asset_name": "Sound-Co-Pilot-2.1.1-to-2.2.5-cumulative.scpup",
+  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/596215734",
+  "asset_size_bytes": 4717311,
   "github_repo": "omarp4304-cyber/sound-co-pilot-updates",
-  "release_tag": "v2.2.4"
+  "release_tag": "v2.2.5"
 }
