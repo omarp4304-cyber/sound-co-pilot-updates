@@ -1,5 +1,14 @@
 # Sound Co-Pilot Updates
 
+## Descargar Sound Co-Pilot
+
+**[Descargar el instalador para Windows](https://github.com/omarp4304-cyber/sound-co-pilot-updates/releases/download/instalador/SoundCoPilot_setup.exe)** (845 MB)
+
+Este enlace siempre lleva al instalador publicado mas reciente. Una vez instalada,
+la app recibe sus actualizaciones sola.
+
+---
+
 Repositorio **publico** de actualizaciones de Sound Co-Pilot.
 No contiene el codigo fuente completo del proyecto.
 
