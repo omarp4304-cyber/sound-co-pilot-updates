@@ -1,5 +1,15 @@
 # Changelog - Sound Co-Pilot Lite (Android)
 
+## 1.3.0 build 4 (2026-11-21)
+
+Etiqueta: `mobile-v1.3.0+4` - emparejada con PC 2.2.8
+
+- Vincular con un toque: al pulsar Buscar mi PC, la PC muestra un aviso para permitir el acceso. El codigo de 6 digitos sigue como alternativa (requiere la app de PC 2.2.8).
+- Con un telefono por Wi-Fi la conexion ya se completa (antes daba error 403 despues de encontrar la PC).
+- Cada stem descargado se compara con la huella de la PC; si llega danado se descarga de nuevo.
+- Una cancion borrada (en la papelera) se puede volver a descargar y regresa a Tus descargas.
+- Al volver a descargar una cancion se conserva su duracion.
+
 ## 1.2.0 build 3 (2026-09-23)
 
 Etiqueta: `mobile-v1.2.0+3` - emparejada con PC 2.2.4
