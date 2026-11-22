@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest_version": "2.2.6",
+  "latest_version": "2.2.8",
   "from_version_hint": "",
   "from_versions": [
     "2.0.0",
@@ -47,19 +47,20 @@
     "2.2.2",
     "2.2.3",
     "2.2.4",
-    "2.2.5"
+    "2.2.5",
+    "2.2.6"
   ],
-  "release_title": "v2.2.6 - Plataformas de musica, YouTube Music y audio fiel al original",
-  "release_notes_md": "# Version 2.2.6\n\nSound Co-Pilot 2.2.6 agrega el panel Plataformas de musica, el buscador de YouTube\nMusic y dos perfiles de modelo para el chat de DJ RAM, y corrige como suenan las\ncanciones. No agrega dependencias nuevas.\n\n## Sonido\n\n- La suma de stems ya reproduce la cancion original. Un limitador del convertidor\n  dejaba other.wav 5 ms tarde y con otro nivel. Las canciones nuevas salen alineadas.\n- Mover la posicion de reproduccion ya no desalinea los stems.\n- La aplicacion arranca sin procesar, y los interruptores de salida de audio indican\n  lo que de verdad esta activo. Quien haya elegido un perfil lo conserva.\n- Amplitud estereo y Proteccion del altavoz ya actuan sobre el audio.\n\n## Reproduccion\n\n- Cambio de cancion de 1.3-2.8 s a 0.15-0.4 s de silencio.\n- Con la ventana minimizada, la cola sigue avanzando al terminar cada cancion.\n- Barra de volumen general y atajos: Espacio, Ctrl + flechas izquierda y derecha\n  (cancion), Ctrl + flechas arriba y abajo (volumen).\n- Pausar durante la carga de una cancion ya no se ignora.\n\n## Plataformas de musica\n\n- Spotify se vincula en tres pasos, con selector de playlists de la cuenta, y permite\n  cambiar de cuenta. Spotify exige Premium en la cuenta que crea la app.\n- Buscador de YouTube Music y YouTube en Procesamiento de audio: admite nombre de\n  cancion o artista, o enlace de cancion, playlist o album.\n\n## Chat con DJ RAM (BETA)\n\n- Perfiles Rapido (qwen3:4b, cualquier PC) y Alta calidad (qwen3.8:27b, PC potente).\n  La aplicacion recomienda segun la VRAM y descarga desde ahi el que falte.\n- Requiere Ollama para Windows.\n\n## Sound Co-Pilot Device\n\n- Firmware BETA 2.2.0 y salida de audio por enlace Wi-Fi (experimental).\n\n## Actualizacion\n\nEl paquete es acumulativo y cubre todas las versiones oficiales desde la 2.1.1 hasta\nla 2.2.5. Conserva configuracion, biblioteca, tokens, audio, modelos y resultados del\nusuario. La aplicacion se reinicia al terminar.\n",
-  "published_at_utc_iso": "2026-11-07T04:29:38.733369+00:00",
-  "package_id": "Sound-Co-Pilot-2.1.1-to-2.2.6-cumulative",
-  "patch_sha256": "2455081ef99f48b9d56a49359e6960b15d5dc5a6a305dc30ab028445b82f5223",
-  "payload_total_bytes": 8086787,
+  "release_title": "v2.2.8 - Vinculacion del telefono con un toque, atajos de teclado y descargas verificadas",
+  "release_notes_md": "# Version 2.2.8\n\nSound Co-Pilot 2.2.8 vincula el telefono con un toque, agrega atajos de teclado para\nlos stems y un temporizador de pausa, y corrige la conexion y las descargas de la\naplicacion movil. Incluye ademas todo lo preparado para la 2.2.7, que no se publico\npor separado. No agrega dependencias nuevas.\n\n## Aplicacion movil\n\n- Vinculacion con un toque: al pulsar Buscar mi PC en el telefono, la PC muestra un\n  aviso con Permitir y Rechazar. El codigo de 6 digitos sigue funcionando.\n- Configuracion > Telefono muestra el telefono vinculado y su ultima conexion, y\n  Desvincular telefono le retira el acceso.\n- Un telefono conectado por la red local ya completa la conexion (antes recibia un\n  error 403 despues de encontrar la PC).\n- Cada stem se envia con su huella SHA-256 para que la aplicacion movil detecte y vuelva\n  a descargar las copias danadas.\n- La vinculacion con un toque y la verificacion de descargas requieren la aplicacion\n  movil actualizada.\n\n## Biblioteca y reproduccion\n\n- Atajos de teclado: 1 a 4 silencian o activan voz, bateria, bajo y resto; 0 los\n  restaura; ? muestra todos los atajos.\n- Temporizador de pausa: 15, 30, 45 o 60 minutos, o al terminar la pista.\n- Las pistas sin artista identificado ya no muestran ni locutan \"Artista detectado\".\n- DJ RAM vuelve a obtener el album y el ano de las pistas desde iTunes.\n\n## Sound Co-Pilot Device\n\n- Nivel de bateria en la barra del Device cuando el firmware lo informa.\n\n## Tambien incluye (preparado para la 2.2.7)\n\n- Seccion Spotify y YouTube Music, con playlists de YouTube Music vinculadas sin cuenta.\n- Recorrido de bienvenida, lista de pistas arriba, arranque mas rapido y tema Aurora.\n- Device en modo App mas rapido, con portada a color para la pantalla de 2.8 pulgadas.\n- Seguridad: el servidor local rechaza peticiones de paginas web ajenas. Se recomienda\n  actualizar.\n\n## Actualizacion\n\nEl paquete es acumulativo y cubre todas las versiones oficiales desde la 2.1.1 hasta la\n2.2.6. Conserva configuracion, biblioteca, tokens, audio, modelos y resultados del\nusuario. La aplicacion se reinicia al terminar.\n",
+  "published_at_utc_iso": "2026-11-22T01:43:06.215605+00:00",
+  "package_id": "Sound-Co-Pilot-2.1.1-to-2.2.8-cumulative",
+  "patch_sha256": "6d59f16f3354a29a82a13cd21a6f73c0e68e3442881d44a6105c2deba2245b20",
+  "payload_total_bytes": 8336016,
   "requires_restart": true,
   "requires_reinstall_requirements": true,
-  "asset_name": "Sound-Co-Pilot-2.1.1-to-2.2.6-cumulative.scpup",
-  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/719602107",
-  "asset_size_bytes": 4785425,
+  "asset_name": "Sound-Co-Pilot-2.1.1-to-2.2.8-cumulative.scpup",
+  "asset_download_api_url": "https://api.github.com/repos/omarp4304-cyber/sound-co-pilot-updates/releases/assets/777500198",
+  "asset_size_bytes": 4860956,
   "github_repo": "omarp4304-cyber/sound-co-pilot-updates",
-  "release_tag": "v2.2.6"
+  "release_tag": "v2.2.8"
 }
